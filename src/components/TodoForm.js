@@ -27,28 +27,13 @@ function TodoForm(props) {
     // //Temp state
     // const [newTask, setNewTask] = useState('');
     // const [updateData, setUpdateData] = useState('');
-    // // Add Task
-    // const addTask = () => {
-
-    // }
-    // // Delete Task
-    // const deleteTask = (id) => {
-        
-    // }
+    
     // // Cancel Update
     // const cancelUpdate = () => {
         
     // }
-    // // Mark Task as done
-    // const markDone = (id) => {
-        
-    // }
     // // Change Task
     // const changeTask = (e) => {
-        
-    // }
-    // // Update Task
-    // const updateTask = () => {
         
     // }
 
