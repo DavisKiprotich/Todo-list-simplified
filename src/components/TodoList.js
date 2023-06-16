@@ -44,6 +44,19 @@ function TodoList() {
         setTodos(updateTodos);
     }
 
+    
+// New Approach
+
+    
+    // // Cancel Update
+    // const cancelUpdate = () => {
+        
+    // }
+    // // Change Task
+    // const changeTask = (e) => {
+        
+    // }
+
   return (
     <div>
         <h1>What is our todo</h1>
