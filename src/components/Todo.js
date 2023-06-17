@@ -28,9 +28,12 @@ function Todo({ completeTodo, todos, deleteTodo, updateTodo }) {
             onClick={() => deleteTodo(todo.id)}
             className='delete-icon'
             />
-            <TiEdit onClick={() => setEdit({id: todo.id, value: todo.text})}
-            className='edit-icon'
-            />
+            {todo.isComplete ? null : 
+                <TiEdit onClick={() => setEdit({id: todo.id, value: todo.text})}
+                className='edit-icon'
+                />
+            }
+            
         </div>
 
     </div>

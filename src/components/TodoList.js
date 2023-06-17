@@ -5,6 +5,7 @@ import Todo from './Todo'
 
 function TodoList() {
     const [todos, setTodos] = useState([])
+    // const [updateData, setUpdateData] = useState('')
 
       // Add Todo
     const addTodo = todo =>{
@@ -31,8 +32,6 @@ function TodoList() {
         setTodos(deleteArr)
     }
 
-
-
     // Complete Todo
     const completeTodo = id =>{
       const updateTodos = todos.map(todo =>{
@@ -44,14 +43,16 @@ function TodoList() {
         setTodos(updateTodos);
     }
 
-    
-// New Approach
-
-    
     // // Cancel Update
     // const cancelUpdate = () => {
         
     // }
+
+    
+// New Approach
+
+    
+    
     // // Change Task
     // const changeTask = (e) => {
         
