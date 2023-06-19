@@ -4,7 +4,10 @@ import Todo from './Todo'
 
 
 function TodoList() {
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([
+      // {id: 1, title: "Task 1", status: false},
+      // {id: 1, title: "Task 1", status: false}
+    ])
     // const [updateData, setUpdateData] = useState('')
 
       // Add Todo
@@ -43,6 +46,17 @@ function TodoList() {
         setTodos(updateTodos);
     }
 
+    // Mark task as done
+    const markDone = (id) => {
+      const newTask =[...todos].map(todo => {
+        if(todo.id === id){
+           todo.isComplete = !todo.isComplete
+        }
+        return todo;
+      })
+      setTodos(newTask);
+    }
+
     // // Cancel Update
     // const cancelUpdate = () => {
         
@@ -62,7 +76,7 @@ function TodoList() {
     <div>
         <h1>What is our todo</h1>
         <TodoForm onSubmit={addTodo} />
-        <Todo todos={todos} deleteTodo={deleteTodo} completeTodo={completeTodo} updateTodo={updateTodo} />
+        <Todo todos={todos} deleteTodo={deleteTodo} completeTodo={completeTodo} updateTodo={updateTodo} markDone={markDone} />
     </div>
   )
 }

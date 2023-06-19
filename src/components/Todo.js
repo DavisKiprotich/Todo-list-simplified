@@ -1,9 +1,9 @@
 import React,{ useState } from 'react'
 import TodoForm from './TodoForm'
-import { RiCloseCircleLine } from 'react-icons/ri'
+import { RiCheckboxCircleFill, RiCloseCircleLine  } from 'react-icons/ri'
 import { TiEdit } from 'react-icons/ti'
 
-function Todo({ completeTodo, todos, deleteTodo, updateTodo }) {
+function Todo({ completeTodo, todos, deleteTodo, updateTodo, markDone }) {
     const[edit, setEdit] = useState({
         id: null,
         value: ''
@@ -33,6 +33,7 @@ function Todo({ completeTodo, todos, deleteTodo, updateTodo }) {
                 className='edit-icon'
                 />
             }
+            <RiCheckboxCircleFill onClick={(e) => markDone(todo.id)}/>
             
         </div>
 
