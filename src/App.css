@@ -31,7 +31,8 @@ h1{
 }
 .complete{
   text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 0.4;
+  cursor: pointer;
 }
 .todo-form{
   margin-bottom: 30px;
@@ -130,3 +131,4 @@ h1{
 .edit-icon{
   color: #fff;
 }
+

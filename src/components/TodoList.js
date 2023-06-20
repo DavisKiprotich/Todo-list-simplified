@@ -5,10 +5,11 @@ import Todo from './Todo'
 
 function TodoList() {
     const [todos, setTodos] = useState([
-      // {id: 1, title: "Task 1", status: false},
-      // {id: 1, title: "Task 1", status: false}
+      {id: 1, title: "Task 1", status: false},
+      {id: 1, title: "Task 2", status: false}
     ])
     // const [updateData, setUpdateData] = useState('')
+    const [newTask, setNewTask] = useState('')
 
       // Add Todo
     const addTodo = todo =>{
@@ -17,8 +18,7 @@ function TodoList() {
         }
         const newTodos = [todo, ...todos]
 
-        setTodos(newTodos)
-        console.log(...todos)
+        setTodos(newTodos);
     }
     
     // Update Todo
@@ -37,7 +37,7 @@ function TodoList() {
 
     // Complete Todo
     const completeTodo = id =>{
-      const updateTodos = todos.map(todo =>{
+      let updateTodos = todos.map(todo =>{
         if(todo.id === id){
           todo.isComplete = !todo.isComplete
         }
@@ -45,27 +45,17 @@ function TodoList() {
       });
         setTodos(updateTodos);
     }
-
+   
     // Mark task as done
     const markDone = (id) => {
-      const newTask =[...todos].map(todo => {
+      let newTask = todos.map(todo => {
         if(todo.id === id){
-           todo.isComplete = !todo.isComplete
+           return ({ ...todo, status: !todo.status })
         }
         return todo;
       })
       setTodos(newTask);
     }
-
-    // // Cancel Update
-    // const cancelUpdate = () => {
-        
-    // }
-
-    
-// New Approach
-
-    
     
     // // Change Task
     // const changeTask = (e) => {
