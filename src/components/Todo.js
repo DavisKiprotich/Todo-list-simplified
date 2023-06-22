@@ -34,7 +34,9 @@ function Todo({ completeTodo, todos, deleteTodo, updateTodo, markDone }) {
                 (<TiEdit className='edit-icon' onClick={() => setEdit({id: todo.id, value: todo.text})} />)
                 
             }
-            <RiCheckboxCircleFill className='check-icon' onClick={ (e) => markDone(todo.id) }/>
+            <div onClick={ (e) => markDone(todo.id) }>
+                <RiCheckboxCircleFill className='check-icon' />
+            </div>
             
         </div>
 

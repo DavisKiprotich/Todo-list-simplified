@@ -5,11 +5,11 @@ import Todo from './Todo'
 
 function TodoList() {
     const [todos, setTodos] = useState([
-      {id: 1, title: "Task 1", status: false},
-      {id: 1, title: "Task 2", status: false}
+      // {id: 1, title: "Task 1", status: false},
+      // {id: 1, title: "Task 2", status: false}   
     ])
     // const [updateData, setUpdateData] = useState('')
-    const [newTask, setNewTask] = useState('')
+    // const [newTask, setNewTask] = useState('')
 
       // Add Todo
     const addTodo = todo =>{
