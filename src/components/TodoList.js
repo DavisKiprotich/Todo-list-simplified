@@ -50,7 +50,7 @@ function TodoList() {
     const markDone = (id) => {
       let newTask = todos.map(todo => {
         if(todo.id === id){
-           return ({ ...todo, status: !todo.status })
+           return ({ ...todo, status: true })
         }
         return todo;
       })
