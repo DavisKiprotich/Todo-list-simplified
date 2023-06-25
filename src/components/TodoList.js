@@ -64,7 +64,7 @@ function TodoList() {
 
   return (
     <div>
-        <h1>What is our todo</h1>
+        <h1>What is my todo</h1>
         <TodoForm onSubmit={addTodo} />
         <Todo todos={todos} deleteTodo={deleteTodo} completeTodo={completeTodo} updateTodo={updateTodo} markDone={markDone} />
     </div>
