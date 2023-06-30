@@ -29,9 +29,9 @@ h1{
   color:aliceblue;
   font-size: 24px;
 }
-.complete{
+.complete .todo-text{
   text-decoration: line-through;
-  opacity: 0.4;
+  opacity: 0.3;
   cursor: pointer;
 }
 .todo-form{

@@ -23,24 +23,27 @@ function Todo({ completeTodo, todos, deleteTodo, updateTodo, markDone }) {
     }
 
   return todos.map( (todo, index) => (
-    <div className={ todo.isComplete ? 'todo-row complete' : 'todo-row' } key={index}>
-        <div key={todo.id} onClick={(e) => completeTodo(todo.id)} >{todo.text}</div>
-        <div className='icons'>
-            <RiCloseCircleLine 
-            onClick={() => deleteTodo(todo.id)}
-            className='delete-icon'
-            />
-            {todo.status ? null : 
-                (<TiEdit className='edit-icon' onClick={() => setEdit({id: todo.id, value: todo.text})} />)
+    <React.Fragment key={todo.id} >
+        <div className={ todo.status ? 'todo-row complete' : 'todo-row' } key={index}>
+            <div className='todo-text' onClick={(e) => completeTodo(todo.id)} >{todo.text}</div>
+            <div className='icons'>
+                <RiCloseCircleLine 
+                onClick={() => deleteTodo(todo.id)}
+                className='delete-icon'
+                />
+                {todo.status ? null : 
+                    (<TiEdit className='edit-icon' onClick={() => setEdit({id: todo.id, value: todo.text})} />)
+                    
+                }
+                {}
+                <div onClick={ (e) => markDone(todo.id) }>
+                    <RiCheckboxCircleFill className='check-icon' />
+                </div>
                 
-            }
-            <div onClick={ (e) => markDone(todo.id) }>
-                <RiCheckboxCircleFill className='check-icon' />
             </div>
-            
-        </div>
 
-    </div>
+        </div>
+    </React.Fragment>
    ))
 }
 
